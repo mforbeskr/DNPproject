@@ -7,6 +7,35 @@ public class UserInMemoryRepository : IUserRepository
 {
     private readonly List<User> users = [];
 
+    public UserInMemoryRepository()
+    {
+        users.Add(new User
+        {
+            Id = 1,
+            Username = "Magnus",
+            Password = "4444",
+        });
+
+        users.Add(new User
+        {
+            Id = 2,
+            Username = "Marley",
+            Password = "4444",
+        });
+        users.Add(new User
+        {
+            Id = 3,
+            Username = "James",
+            Password = "4444",
+        });
+        users.Add(new User
+        {
+            Id = 4,
+            Username = "Bobby",
+            Password = "4444",
+        });
+    }
+
     public Task<User> AddAsync(User user)
     {
         user.Id = users.Any() ? users.Max(u => u.Id) + 1 : 1;
