@@ -19,7 +19,7 @@ Made by: Magnus Forbes Kjær-Rasmussen
 - Git
 - GitHub
 
-## Assignments done (1/7)
+## Assignments done (out of 7)
 
 ✓ Assignment 1: Entities & Repositories 
 
