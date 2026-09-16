@@ -11,7 +11,7 @@ Made by: Magnus Forbes Kjær-Rasmussen
 
 ## Domain Model
 
-docs/DomainModel.svg
+![DomainModel.svg](DomainModel.svg)
 
 ## Technologies
 - C#
