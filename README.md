@@ -7,11 +7,10 @@ Distributed Network Programming (DNP)
 course at VIA University College.
 
 Made by: Magnus Forbes Kjær-Rasmussen
-: 
 
 ## Domain Model
 
-![DomainModel.svg](DomainModel.svg)
+![DomainModel.svg](./docs/DomainModel.svg)
 
 ## Technologies
 - C#
@@ -20,6 +19,6 @@ Made by: Magnus Forbes Kjær-Rasmussen
 - Git
 - GitHub
 
-## Assignments
+## Assignments done (1/7)
 
 ✓ Assignment 1: Entities & Repositories
