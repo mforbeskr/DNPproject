@@ -21,5 +21,6 @@ Made by: Magnus Forbes Kjær-Rasmussen
 
 ## Assignments done (1/7)
 
-✓ Assignment 1: Entities & Repositories
+✓ Assignment 1: Entities & Repositories 
+
 ✓ Assignment 2: Command Line Interface
