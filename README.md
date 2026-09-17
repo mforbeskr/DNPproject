@@ -24,3 +24,5 @@ Made by: Magnus Forbes Kjær-Rasmussen
 ✓ Assignment 1: Entities & Repositories 
 
 ✓ Assignment 2: Command Line Interface
+
+✓ Assignment 3: File Persistence
