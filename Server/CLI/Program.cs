@@ -1,6 +1,6 @@
 ﻿using CLI.UI;
+using FileRepositories;
 using RepositoryContracts;
-using InMemoryRepositories;
 
 namespace CLI;
 
@@ -8,9 +8,9 @@ public class Program
 {
     public static async Task Main(string[] args)
     {
-        IPostRepository postRepo = new PostInMemoryRepository();
-        IUserRepository userRepo = new UserInMemoryRepository();
-        ICommentRepository commentRepo = new CommentInMemoryRepository();
+        IPostRepository postRepo = new PostFileRepository();
+        IUserRepository userRepo = new UserFileRepository();
+        ICommentRepository commentRepo = new CommentFileRepository();
 
         CliApp app = new CliApp(
             postRepo,

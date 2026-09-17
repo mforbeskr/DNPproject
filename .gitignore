@@ -1,6 +1,16 @@
+# Build output
 bin/
 obj/
-.idea
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+
+# Rider
+.idea/
+*.iml
+
+# ReSharper
+_ReSharper.Caches/
+
+# NuGet
+packages/
+
+# Data
+**/Data/
