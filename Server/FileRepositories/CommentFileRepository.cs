@@ -6,18 +6,15 @@ namespace FileRepositories;
 
 public class CommentFileRepository : ICommentRepository
 {
-    private readonly string dataDir = Path.Combine("..", "Data");
     private readonly string filePath;
 
     public CommentFileRepository()
     {
-        filePath = Path.Combine(dataDir, "comments.json");
-
-        Directory.CreateDirectory(dataDir);
+        filePath = Path.Combine(DataDirectory.Path, "comments.json");
 
         if (!File.Exists(filePath))
         {
-            File.WriteAllText(filePath, "[]");
+            File.Copy(Path.Combine(AppContext.BaseDirectory, "SeedData", "comments.json"), filePath);
         }
     }
 

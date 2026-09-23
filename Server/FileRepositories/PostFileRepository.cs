@@ -6,18 +6,15 @@ namespace FileRepositories;
 
 public class PostFileRepository : IPostRepository
 {
-    private readonly string dataDir = Path.Combine("..", "Data");
     private readonly string filePath;
 
     public PostFileRepository()
     {
-        filePath = Path.Combine(dataDir, "posts.json");
-
-        Directory.CreateDirectory(dataDir);
+        filePath = Path.Combine(DataDirectory.Path, "posts.json");
 
         if (!File.Exists(filePath))
         {
-            File.WriteAllText(filePath, "[]");
+            File.Copy(Path.Combine(AppContext.BaseDirectory, "SeedData", "posts.json"), filePath);
         }
     }
 

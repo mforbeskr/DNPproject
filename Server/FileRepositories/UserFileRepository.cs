@@ -6,18 +6,15 @@ namespace FileRepositories;
 
 public class UserFileRepository : IUserRepository
 {
-    private readonly string dataDir = Path.Combine("..", "Data");
     private readonly string filePath;
 
     public UserFileRepository()
     {
-        filePath = Path.Combine(dataDir, "users.json");
-
-        Directory.CreateDirectory(dataDir);
+        filePath = Path.Combine(DataDirectory.Path, "users.json");
 
         if (!File.Exists(filePath))
         {
-            File.WriteAllText(filePath, "[]");
+            File.Copy(Path.Combine(AppContext.BaseDirectory, "SeedData", "users.json"), filePath);
         }
     }
 
