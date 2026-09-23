@@ -205,6 +205,16 @@ public class CliApp
             return;
         }
 
+        bool usernameTaken = userRepo.GetManyAsync()
+            .Any(u => u.Username.ToLower() == username.ToLower());
+
+        if (usernameTaken)
+        {
+            Console.WriteLine($"Username '{username}' is already taken");
+            Console.ReadLine();
+            return;
+        }
+
         User user = new User
         {
             Username = username ?? "",
