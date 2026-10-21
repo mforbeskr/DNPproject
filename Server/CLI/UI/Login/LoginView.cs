@@ -22,7 +22,7 @@ public class LoginView
     {
         while (true)
         {
-            ConsoleUi.Header("Welcome");
+            ConsoleUi.Header("TS-DNP1-A26");
 
             string choice = ConsoleUi.Menu("Log in or create a user to get started",
                 LogInOption, SignUpOption, ExitOption);

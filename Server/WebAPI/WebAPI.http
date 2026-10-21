@@ -1,0 +1,56 @@
+### Create User
+POST http://localhost:5023/users
+Content-Type: application/json
+
+{
+  "username": "testingggg",
+  "password": "1234"
+}
+
+### Get user
+GET http://localhost:5023/users/4
+
+### Get missing user [404 Not Found]
+GET http://localhost:5023/users/9999
+
+### All users
+GET http://localhost:5023/users
+
+### Filter users
+GET http://localhost:5023/users?username=te
+
+### Filter users
+GET http://localhost:5023/users?username=tea
+
+### Delete duplicate test users (keeps id 9 'test' and id 12 'testingggg')
+DELETE http://localhost:5023/users/10
+
+###
+DELETE http://localhost:5023/users/11
+
+###
+DELETE http://localhost:5023/users/13
+
+###
+DELETE http://localhost:5023/users/14
+
+###
+DELETE http://localhost:5023/users/15
+
+###
+DELETE http://localhost:5023/users/16
+
+###
+DELETE http://localhost:5023/users/17
+
+###
+DELETE http://localhost:5023/users/18
+
+###
+PUT http://localhost:5023/users/9
+Content-Type: application/json
+
+{
+  "username": "Skizo",
+  "password": "1234"
+}

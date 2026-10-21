@@ -48,7 +48,7 @@ public class UserInMemoryRepository : IUserRepository
         User? existingUser = users.SingleOrDefault(u => u.Id == user.Id);
         if (existingUser is null)
         {
-            throw new InvalidOperationException(
+            throw new NotFoundException(
                 $"User with ID '{user.Id}' not found");
         }
 
@@ -63,7 +63,7 @@ public class UserInMemoryRepository : IUserRepository
         User? userToRemove = users.SingleOrDefault(u => u.Id == id);
         if (userToRemove is null)
         {
-            throw new InvalidOperationException($"User with ID '{id}' not found");
+            throw new NotFoundException($"User with ID '{id}' not found");
         }
 
         users.Remove(userToRemove);
@@ -75,7 +75,7 @@ public class UserInMemoryRepository : IUserRepository
         User? user = users.SingleOrDefault(u => u.Id == id);
         if (user is null)
         {
-            throw new InvalidOperationException($"User with ID '{id}' not found");
+            throw new NotFoundException($"User with ID '{id}' not found");
         }
 
         return Task.FromResult(user);

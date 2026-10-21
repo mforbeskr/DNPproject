@@ -5,6 +5,7 @@ obj/
 # Rider
 .idea/
 *.iml
+*.DotSettings.user
 
 # ReSharper
 _ReSharper.Caches/
