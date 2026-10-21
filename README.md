@@ -16,6 +16,14 @@ dotnet run --project Server/CLI
 
 Or in Rider, run the `CLI` project.
 
+To run the Web API instead:
+
+```
+dotnet run --project Server/WebAPI
+```
+
+The API runs on `http://localhost:5023`. Example requests are in `Server/WebAPI/WebAPI.http`.
+
 On first run, a `Data/` folder is created in the project root with seed data.
 
 ## Features
@@ -27,6 +35,8 @@ The CLI is navigated with the arrow keys. Every screen has a way back, and you c
 - **Comments:** add comments to any post, edit and delete your own
 - **Users:** browse and search users, view a user's posts and comments, change your username or password, delete your account
 
+The Web API exposes `/users`, `/posts` and `/comments`, each with create, get, get many (with filters), update and delete.
+
 ## Project structure
 
 | Project | Responsibility |
@@ -36,6 +46,8 @@ The CLI is navigated with the arrow keys. Every screen has a way back, and you c
 | `InMemoryRepositories` | List based repositories (Assignment 1) |
 | `FileRepositories` | JSON file repositories (Assignment 3) |
 | `CLI` | Console UI, split into views per entity |
+| `WebAPI` | REST API with controllers per entity (Assignment 4) |
+| `ApiContracts` | DTOs shared between server and client |
 
 ## Domain Model
 
@@ -44,6 +56,7 @@ The CLI is navigated with the arrow keys. Every screen has a way back, and you c
 ## Technologies
 - C#
 - .NET
+- ASP.NET Core
 - [Spectre.Console](https://spectreconsole.net/)
 - Rider
 - Git
@@ -56,6 +69,8 @@ The CLI is navigated with the arrow keys. Every screen has a way back, and you c
 ✓ Assignment 2: Command Line Interface
 
 ✓ Assignment 3: File Persistence
+
+✓ Assignment 4: Web API
 
 ## Author
 
