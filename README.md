@@ -22,7 +22,9 @@ To run the Web API instead:
 dotnet run --project Server/WebAPI
 ```
 
-The API runs on `http://localhost:5023`. Example requests are in `Server/WebAPI/WebAPI.http`.
+The API runs on `http://localhost:5023`. There is no page at the root, so open an endpoint instead, e.g. http://localhost:5023/users, /posts or /comments. The browser can only send GET requests; for POST, PUT and DELETE use the example requests in `Server/WebAPI/WebAPI.http`.
+
+Stop the API (Ctrl+C) before building again, or the build fails because the running app locks its DLLs.
 
 On first run, a `Data/` folder is created in the project root with seed data.
 
